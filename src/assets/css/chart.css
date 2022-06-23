@@ -1,0 +1,9 @@
+.dark .token-address-color {
+    color: rgba(211, 242, 218, 1);
+    font-size: 14px;
+}
+
+.token-address-color {
+    color: rgb(31, 32, 32);
+    font-size: 14px;
+}

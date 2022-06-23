@@ -1,0 +1,265 @@
+.is_dark .home-bg {
+    background: url("../home-img/dark-bg.jpg") !important;
+    background-size: cover !important;
+}
+
+.is_dark .header-bar {
+    background: linear-gradient(90deg, #dc1a22, #dc1a22, #151314);
+}
+
+/* header */
+.is_dark .mobile-button:before,
+.is_dark .mobile-button:after,
+.is_dark .mobile-button span {
+    background-color: white !important;
+}
+
+.is_dark .main-nav>ul>li>a {
+    color: #d2d3d8 !important;
+}
+
+.is_light .alarm-bg {
+    background: #e1e1e1 !important;
+    /* background: linear-gradient(90deg, rgb(126, 101, 101), rgb(126, 111, 111)) !important; */
+}
+
+.is_light .forarrow {
+    background: #e1e1e1 !important;
+}
+
+.is_light .alarm-bg {
+    color: #151314;
+}
+
+.is_light .alarm-bg {
+    box-shadow: 0px 2px 10px 1px black;
+}
+
+
+
+
+/* ************************************************** HOME start ********************************************************** */
+/* video */
+.is_dark .for-video-border {
+    background: #1b1110 !important;
+}
+
+/* our team */
+.is_dark .for-half-border {
+    background: #380808 !important;
+}
+
+/* Roadmap */
+.is_dark .roadmap-main {
+    color: #a1a19f;
+}
+
+/* FAQ */
+.is_dark .faq {
+    color: #a1a19f;
+}
+
+.is_dark .faq .menu>li>a {
+    color: #a1a19f !important;
+}
+
+.is_dark .faq-bar {
+    background: linear-gradient(90deg, #661617, #661617, #210f0f) !important;
+    border-right: 3px #661617 solid !important;
+}
+
+.is_dark .faq-bar h2 {
+    color: #9e4b05 !important;
+}
+
+/* ************************************************** HOME end ********************************************************** */
+
+/* ************************************************** mygang start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+/* ************************************************** mygang end ********************************************************** */
+/* Available */
+
+.is_light .all-group-number {
+    background: #e1e1e1 !important;
+    border: 1px solid #5d453a;
+}
+
+.is_light .all-group-number h4 {
+    color: #2a2a2a !important;
+}
+
+/* gang-group */
+.is_light .gang-group-card {
+    background: #e1e1e1 !important;
+}
+
+.is_light .gang-group-info {
+    background: #e1e1e1 !important;
+    color: #2a2a2a !important;
+}
+
+.is_light .character-paragraph {
+    background: #fff !important;
+    color: #2a2a2a !important;
+}
+
+.is_light .member-type p {
+    color: black;
+}
+
+.is_light .member-dis {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.is_light .view-more {
+    color: #2a2a2a !important;
+}
+
+.is_light .card-character {
+    /* border: 1px solid #E8A22F;
+    background: #49310d; */
+}
+
+.is_light .gang-card-info {
+    background: #e1e1e1 !important;
+    color: #2a2a2a !important;
+}
+
+.is_light .thing::after {
+    border-color: #806859 !important;
+}
+
+.is_light .thing::before {
+    border-color: #806859 !important;
+}
+
+.is_light .gang-modal {
+    background: #ffffff !important;
+}
+
+.is_light .gang-modal .character-paragraph {
+    background: #e1e1e1 !important;
+}
+
+.is_light .gang-modal .gang-card-info {
+    border-color: #806859 !important;
+    border-width: 4px !important;
+}
+
+/* ************************************************** minting start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+/* ************************************************** minting end ********************************************************** */
+
+/* ************************************************** staking start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+/* ************************************************** staking end ********************************************************** */
+
+/* ************************************************** shop start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+/* ************************************************** shop end ********************************************************** */
+
+/* ************************************************** Breeding start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+.is_dark .white-black {
+    color: white;
+}
+
+.is_light .breeding .red-border {
+    border-color: #1b1110 !important;
+}
+
+.is_light .breeding .for-yellow-gradient {
+    border-color: #1b1110 !important;
+    color: #151314 !important;
+}
+
+
+/* ************************************************** Breeding end ********************************************************** */
+
+/* ************************************************** Breeding start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+.is_light .time-ex {
+    color: #151314;
+}
+
+/* ************************************************** Breeding end ********************************************************** */
+
+/* ************************************************** Map start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+/* ************************************************** Map end ********************************************************** */
+
+/* ************************************************** Swap start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+.is_light .swap-yello-color {
+    color: #2a2a2a !important;
+}
+
+.is_light .swap-symbol-color {
+    color: #2a2a2a !important;
+}
+
+.is_light .swap-input {
+    color: #151314 !important;
+}
+
+
+/* ************************************************** Swap end ********************************************************** */
+
+/* ************************************************** Marketplace start ********************************************************** */
+
+.is_dark .for-mygangbtn-border {
+    background: #1b1110 !important;
+}
+
+/* ************************************************** Marketplace end ********************************************************** */
+
+
+
+/* footer */
+.is_dark .footer {
+    color: #a1a19f;
+}
+
+.is_dark .footer .a a {
+    color: #a1a19f !important;
+}
+
+.is_dark .footer .a a:hover {
+    color: #e9c811 !important;
+}
