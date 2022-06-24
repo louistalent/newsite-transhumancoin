@@ -4,6 +4,12 @@
     --darkgray: #2c3e50;
 }
 
+.swiper-slide {
+    width: 100%;
+    height: 300px;
+
+}
+
 .cus-select {
     /* Reset Select */
     appearance: none;
@@ -65,7 +71,7 @@
 }
 
 .home-bg {
-    background: url("../home-img/light-bg.jpg");
+    /* background: url("../home-img/light-bg.jpg"); */
     background-size: cover !important;
 }
 
@@ -240,7 +246,7 @@
     
 } */
 
-.slider-first-section {
+.slider-section {
     touch-action: pan-y;
     user-select: none;
     -webkit-user-drag: none;

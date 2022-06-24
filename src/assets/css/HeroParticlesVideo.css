@@ -415,7 +415,8 @@ section.svelte-1xbpr64 {
 }
 
 #episode-1.svelte-8mfvuh.svelte-8mfvuh {
-    background: url('/images/bg-episode-1.svg') #f6f8fc;
+    /* background: url('../svg/bg-episode-1.svg') #f6f8fc; */
+    background: #f6f8fc;
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto 100%;

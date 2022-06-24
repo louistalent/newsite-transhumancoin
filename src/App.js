@@ -1,5 +1,5 @@
 
-// import './App.css';
+import './App.css';
 // import './assets/css/main.css';
 // import './assets/css/sub-main.css';
 import Routers from './router';
@@ -16,7 +16,7 @@ import { NotificationContainer } from "react-notifications";
 import "swiper/swiper-bundle.min.css";
 
 import "swiper/swiper.min.css";
-// import "./assets/css/HeroParticlesVideo.css";
+import "./assets/css/HeroParticlesVideo.css";
 import "./assets/css/layout.css";
 
 // import "swiper/css/navigation";

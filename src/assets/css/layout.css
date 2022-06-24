@@ -2384,6 +2384,17 @@ p:empty {
     transform: translateZ(0);
 }
 
+/* .slide-article.active.element-from-blur
+{
+    -webkit-animation: element-from-blur-animate 1s normal forwards;
+        animation: element-from-blur-animate 1s normal forwards;
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        perspective: 1000;
+        transform: translateZ(0);
+} */
 @-webkit-keyframes element-from-blur-animate {
     0% {
         filter: blur(30px);
