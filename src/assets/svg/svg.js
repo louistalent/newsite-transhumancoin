@@ -52,3 +52,59 @@ export const CopyAddressSvg = () => {
     )
 }
 
+export const GitSvg = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" className="ml-1 fill-current text-primary-dark dark:text-primary">
+            <path d="M6 17V5a3 3 0 013-3h5l6 6v9a3 3 0 01-3 3H9a3 3 0 01-3-3z" opacity=".35"></path>
+            <path d="M14 6V2l6 6h-4a2 2 0 01-2-2zM9 20a3 3 0 01-3-3V5a2 2 0 00-2 2v12a3 3 0 003 3h8a2 2 0 002-2H9z"></path>
+        </svg>
+
+    )
+}
+
+export const LinkedinSvg = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" className="ml-1 fill-current text-primary-dark dark:text-primary">
+            <path d="M6 17V5a3 3 0 013-3h5l6 6v9a3 3 0 01-3 3H9a3 3 0 01-3-3z" opacity=".35"></path>
+            <path d="M14 6V2l6 6h-4a2 2 0 01-2-2zM9 20a3 3 0 01-3-3V5a2 2 0 00-2 2v12a3 3 0 003 3h8a2 2 0 002-2H9z"></path>
+        </svg>
+
+    )
+}
+
+export const MediumSvg = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" className="ml-1 fill-current text-primary-dark dark:text-primary">
+            <path d="M6 17V5a3 3 0 013-3h5l6 6v9a3 3 0 01-3 3H9a3 3 0 01-3-3z" opacity=".35"></path>
+            <path d="M14 6V2l6 6h-4a2 2 0 01-2-2zM9 20a3 3 0 01-3-3V5a2 2 0 00-2 2v12a3 3 0 003 3h8a2 2 0 002-2H9z"></path>
+        </svg>
+
+    )
+}
+
+export const TwitterSvg = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" className="ml-1 fill-current text-primary-dark dark:text-primary">
+            <path d="M6 17V5a3 3 0 013-3h5l6 6v9a3 3 0 01-3 3H9a3 3 0 01-3-3z" opacity=".35"></path>
+            <path d="M14 6V2l6 6h-4a2 2 0 01-2-2zM9 20a3 3 0 01-3-3V5a2 2 0 00-2 2v12a3 3 0 003 3h8a2 2 0 002-2H9z"></path>
+        </svg>
+
+    )
+}
+
+export const ScholarSvg = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" className="ml-1 fill-current text-primary-dark dark:text-primary">
+            <path d="M6 17V5a3 3 0 013-3h5l6 6v9a3 3 0 01-3 3H9a3 3 0 01-3-3z" opacity=".35"></path>
+            <path d="M14 6V2l6 6h-4a2 2 0 01-2-2zM9 20a3 3 0 01-3-3V5a2 2 0 00-2 2v12a3 3 0 003 3h8a2 2 0 002-2H9z"></path>
+        </svg>
+
+    )
+}
+
+

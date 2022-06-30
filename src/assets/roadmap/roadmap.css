@@ -1,0 +1,723 @@
+/****
+BACKGROUNDS
+****/
+.highlighted-area {
+    background: rgb(99, 240, 67);
+    background: linear-gradient(90deg, rgba(99, 240, 67, 1) 0%, rgba(20, 194, 90, 1) 100%);
+    color: #100F21;
+}
+
+.secondary-bg {
+    /* background: #1E1D32; */
+    background: linear-gradient(292deg, #485776, #131f37);
+}
+
+.green-highlight {
+    color: #63F043;
+}
+
+.padding {
+    padding: 150px 60px;
+}
+
+.padding-sm {
+    padding: 40px 0px;
+}
+
+.mt {
+    margin-top: 40px;
+}
+
+.mb {
+    margin-bottom: 40px;
+}
+
+.pb {
+    padding-bottom: 40px;
+}
+
+.no-pb {
+    padding-bottom: 0px;
+}
+
+.pt {
+    padding-top: 40px;
+}
+
+.width-sm {
+    max-width: 650px;
+}
+
+.width-md {
+    max-width: 1000px;
+}
+
+.width-lg {
+    max-width: 1400px;
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.show {
+    visibility: visible;
+}
+
+/****
+FLEXBOX
+****/
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-center {
+    align-items: center;
+}
+
+.horizontal-center {
+    justify-content: center;
+}
+
+.col {
+    flex: 1;
+}
+
+/****
+ANIMATIONS
+****/
+@keyframes floating {
+    from {
+        top: 0;
+    }
+
+    50% {
+        top: 30px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes one-swap {
+    from {
+        opacity: 1;
+        left: 50%;
+        transform: scale(1) translate(-50%, -50%);
+    }
+
+    49% {
+        opacity: 0;
+        left: 15%;
+        transform: scale(.7) translate(-50%, -50%);
+    }
+
+    50% {
+        opacity: 0;
+        left: 70%;
+        transform: scale(.7) translate(-50%, -50%);
+    }
+
+    90% {
+        opacity: 1;
+        left: 50%;
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes gem-swap {
+    from {
+        opacity: 0;
+        left: 70%;
+        transform: scale(.7) translate(-50%, -50%);
+    }
+
+    50%,
+    60% {
+        opacity: 1;
+        left: 50%;
+        transform: scale(1) translate(-50%, -50%);
+    }
+
+    to {
+        opacity: 0;
+        left: 15%;
+        transform: scale(.7) translate(-50%, -50%);
+    }
+}
+
+.float {
+    animation: floating 3.5s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/****
+SOCIAL
+****/
+.social a {
+    color: #FBE375;
+    text-align: left;
+    font-size: 24px;
+    margin-right: 16px;
+}
+
+.social a:hover {
+    text-decoration: none;
+    color: #63F043;
+}
+
+.social li {
+    display: inline-block;
+}
+
+.twitter::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f099";
+}
+
+.reddit::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f1a1";
+}
+
+.discord::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f392";
+}
+
+.telegram::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f2c6";
+}
+
+.youtube::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f167";
+}
+
+.instagram::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f16d";
+}
+
+.facebook::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f09a";
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+        /* height = 100 * (9 / 16) = 56.25 */
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+        /* width = 100 / (9 / 16) = 177.777777 */
+        width: 177.78vh;
+    }
+}
+
+/****
+ROADMAP
+****/
+
+.roadmap-finished .roadmap-head::after {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: rgb(16, 15, 33);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    font-size: 0.88rem;
+    content: "";
+    border-radius: 50%;
+    background: rgb(99, 240, 67);
+}
+
+.roadmap {
+    position: relative;
+}
+
+.roadmap.padding.secondary-bg {
+    overflow-x: hidden;
+}
+
+.roadmap.padding.secondary-bg:before {
+    content: '';
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    display: block;
+    background: #ffffff;
+    height: 180px;
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    right: 0;
+}
+
+.roadmap-wrap {
+    position: relative;
+    width: 1000px;
+}
+
+.roadmap-line {
+    position: absolute;
+    left: 19px;
+    top: 0;
+    background: #FBE375;
+    height: 100%;
+    width: 1px;
+    content: '';
+    z-index: 1;
+}
+
+.roadmap-line:before {
+    top: 0;
+}
+
+.roadmap-line:after,
+.roadmap-line:before {
+    position: absolute;
+    background: #FBE375;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    content: '';
+    left: -4px;
+}
+
+.roadmap-line:after {
+    bottom: 0;
+}
+
+.roadmap-year {
+    border-radius: 50%;
+    color: #100F21;
+    background: #FBE375;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    position: relative;
+    left: -5px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    z-index: 10;
+}
+
+.roadmap-step {
+    border: 1px solid #FBE375;
+    border-radius: 15px;
+    position: relative;
+    padding: 20px 20px 15px;
+    position: relative;
+    max-width: 420px;
+    background: #100F21;
+    font-weight: 300;
+}
+
+.roadmap-step:before {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    /* border: 5px solid #1E1D32; */
+    background: #FBE375;
+    left: -41px;
+    top: 38px;
+    z-index: 1;
+}
+
+.roadmap-step:before {
+    border-color: #1E1D32;
+}
+
+.roadmap-step:before,
+.roadmap-step:after {
+    position: absolute;
+    content: '';
+    z-index: 1;
+}
+
+.roadmap-head {
+    margin-bottom: 10px;
+    padding-right: 35px;
+    position: relative;
+}
+
+.roadmap-time {
+    display: block;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.roadmap-title {
+    color: #FBE375;
+    font-size: 26px;
+    font-family: 'Lora', serif;
+}
+
+.roadmap-finished .roadmap-head:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    color: #100F21;
+    /* background: url(./dragon.png); */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    font-size: .88rem;
+}
+
+.roadmap-step p:last-child {
+    margin-bottom: 0;
+}
+
+.roadmap-step:after {
+    height: 1px;
+    width: 22px;
+    background: #FBE375;
+    left: -22px;
+    top: 43px;
+}
+
+.roadmap-step ul {
+    font-size: 14px;
+    line-height: 160%;
+}
+
+.roadmap-step ul li {
+    padding: 4px 0px;
+}
+
+/****
+WHITEPAPERS
+****/
+.icon-download {
+    width: 30px;
+}
+
+.scroll {
+    position: relative;
+    top: 0px;
+}
+
+/****
+PARTNERS
+****/
+.partners a {
+    display: inline-block;
+    max-width: 300px;
+}
+
+.partners a img {
+    transform: scale(1);
+    transition: all .2s ease-in-out;
+    transform-origin: center;
+}
+
+.partners a:hover img {
+    transform: scale(1.1);
+}
+
+/****
+EXTRA
+****/
+.start-playing h2,
+.start-playing .social a {
+    color: #100F21;
+}
+
+/****
+FOOTER
+****/
+footer .social {
+    color: #FBE375;
+}
+
+footer .social a,
+.start-playing .social a {
+    font-size: 34px;
+    margin-left: 16px;
+}
+
+#mc_embed_signup input {
+    background: white;
+    padding: 16px 20px;
+    border: 0px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+#mc_embed_signup input[type=submit] {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #100F21;
+    background: rgb(99, 240, 67);
+    background: linear-gradient(90deg, rgba(99, 240, 67, 1) 0%, rgba(20, 194, 90, 1) 100%);
+}
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-rtl {
+    direction: rtl;
+}
+
+.countdown-row {
+    clear: both;
+    width: 100%;
+    padding: 0px 2px;
+    text-align: center;
+}
+
+.countdown-section {
+    display: block;
+    float: left;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.countdown-amount {
+    font-size: 50px !important;
+    color: #63F043 !important;
+}
+
+.countdown-period {
+    display: block;
+}
+
+.countdown-descr {
+    display: block;
+    width: 100%;
+}
+
+#countdown {
+    margin: 0 auto;
+}
+
+/****
+MEDIA QUERIES
+****/
+@media (min-width: 1200px) {
+    .roadmap-step:before {
+        left: -86px;
+    }
+
+    .roadmap-step:after {
+        width: 73px;
+        left: -73px;
+    }
+
+    .roadmap-left .roadmap-step:before {
+        right: -86px;
+    }
+
+    .roadmap-left .roadmap-step:after {
+        right: -73px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    /** ROADMAP **/
+    .roadmap-line {
+        left: 50%;
+        margin-left: -1px;
+    }
+
+    .roadmap {
+        display: flex;
+    }
+
+    .roadmap-year {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        font-size: 16px;
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .roadmap-left {
+        justify-content: flex-start;
+        margin-top: -60px;
+    }
+
+    .roadmap-left .roadmap-step:after {
+        left: auto;
+        right: -78px;
+    }
+
+    .roadmap-left .roadmap-step:before {
+        left: auto;
+        right: -86px;
+    }
+
+    .roadmap-right {
+        justify-content: flex-end;
+        margin-top: -60px;
+    }
+
+    .roadmap-step {
+        width: 100%;
+        padding: 40px 30px 35px;
+    }
+
+    .roadmap-step:before {
+        left: -86px;
+    }
+
+    .roadmap-step:before,
+    .roadmap-step:after {
+        position: absolute;
+        content: '';
+    }
+
+    .roadmap-step:after {
+        width: 78px;
+        left: -78px;
+    }
+
+    .roadmap-head {
+        margin-bottom: 15px;
+    }
+
+    .roadmap-time {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    #play,
+    header .social {
+        display: none;
+    }
+
+    .kingdom-details .row {
+        flex-wrap: wrap;
+    }
+
+    .kingdom-details .row .col {
+        min-width: 40%;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .padding {
+        padding: 80px 40px;
+    }
+
+    .no-pb {
+        padding-bottom: 0px;
+    }
+
+    .dropdown-content {
+        visibility: hidden;
+        transition: all .2s ease;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .show {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .roadmap-wrap {
+        max-width: 370px;
+        margin: 0 auto;
+    }
+
+    .roadmap-step {
+        max-width: 280px;
+        left: 53px;
+        margin-bottom: 40px;
+        font-size: 14px;
+        line-height: 160%;
+    }
+
+    .roadmap.padding.secondary-bg:before {
+        clip-path: polygon(0% 100%, 0 0, 100% 0);
+        height: 150px;
+    }
+}
+
+@media (max-width: 786px) {
+    .jewel .content>.row {
+        flex-direction: column;
+    }
+
+    .jewel h2 {
+        text-align: center;
+    }
+
+    .jewel .content .col {
+        width: 100%;
+    }
+
+    .jewel .token-icons {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .kingdom-details .row {
+        flex-direction: column;
+    }
+
+    .kingdom-details .row .col {
+        max-width: 300px;
+        margin: 0 auto 40px;
+    }
+
+    .sm-1 {
+        order: 1;
+    }
+
+    .sm-2 {
+        order: 2;
+    }
+
+    .kingdom-heading:before {
+        content: '';
+    }
+
+    .hero h3 {
+        display: none;
+    }
+
+    #mc_embed_signup input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact iframe {
+        height: 600px !important;
+    }
+
+    .popupVidContainer iframe {
+        width: 280px;
+        height: 157.5px;
+    }
+}

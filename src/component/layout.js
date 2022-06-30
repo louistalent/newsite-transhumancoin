@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 // import Sidebar from './sidebar';
-import Header from './header';
+// import Header from './header';
 function Layout(props) {
     // useEffect(() => {
     // }, [])
@@ -30,7 +30,7 @@ export default Layout;
         //     </div>
         // </>
 
-// Footer section 
+// Footer section
 // https://twitter.com/transhumancoin
 // https://t.me/joinchat/hYQyhaCsavlmNjQ0
 // https://www.facebook.com/transhumancoin

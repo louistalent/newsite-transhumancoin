@@ -4532,10 +4532,45 @@ section.svelte-1vgghv3 .slides-titles .item.active svg.circle-animated.svelte-1v
 section.svelte-1vgghv3 .slides-titles .item.active svg.circle-animated circle.svelte-1vgghv3 {
     transform: rotate(17deg);
     transform-origin: 50% 50%;
+
 }
 
 section.svelte-1vgghv3 .slides-titles .item.active svg.circle-animated circle.animate.svelte-1vgghv3 {
     transition: stroke-dashoffset .8s linear .1s;
+    /* stroke-dasharray: -556.0618996853934;
+    stroke-dashoffset: 0; */
+    /* strokeDasharray="556.0618996853934 556.0618996853934" */
+
+}
+
+.circle-animation {
+    stroke-dasharray: 556.0618996853934;
+    stroke-dashoffset: -556.0618996853934;
+    animation: dash .8s linear forwards;
+}
+
+.right-animation {
+    transform: translate(1600%) scale(10, .375) !important;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: -556.0618996853934;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes right {
+    from {
+        stroke-dashoffset: -556.0618996853934;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @media (min-width:1064px) {

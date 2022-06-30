@@ -10,6 +10,17 @@
 
 }
 
+.border-top10 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.border-bottom10 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .cus-select {
     /* Reset Select */
     appearance: none;
@@ -128,6 +139,12 @@
     padding: 15px;
 }
 
+.green-border {
+    border: 2px solid #13c034;
+    border-radius: 10px;
+    padding: 15px;
+}
+
 .border-style {
     border-radius: 20px;
     border-top-style: none;
@@ -231,9 +248,18 @@
 }
 
 .content-visable {
-    height: 200px !important;
+    height: 100% !important;
     opacity: 1 !important;
     transform: translateY(0) !important;
+    transition: all .7s ease-in;
+}
+
+.content-visable a {
+    display: inline !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    color: #13c034 !important;
+    text-decoration: underline;
 }
 
 .faq .menu ul a {
@@ -262,6 +288,13 @@
 
 
 
+tokenomics_class {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
 
 /* responsive */

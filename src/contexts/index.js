@@ -6,16 +6,17 @@ import React, {
     useCallback,
     useEffect,
 } from "react";
-import { ethers } from "ethers";
-import { useWallet } from "use-wallet";
+// import { ethers } from "ethers";
+// import { useWallet } from "use-wallet";
 
-import { NotificationManager } from "react-notifications";
+// import { NotificationManager } from "react-notifications";
 
 const BlockchainContext = createContext();
 
 export function useBlockchainContext() {
     return useContext(BlockchainContext);
 }
+
 
 function reducer(state, { type, payload }) {
     return {
@@ -41,7 +42,7 @@ const INIT_STATE = {
 
 
 export default function Provider({ children }) {
-    const wallet = useWallet();
+    // const wallet = useWallet();
     const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
     return (

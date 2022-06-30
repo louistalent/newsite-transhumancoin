@@ -2,48 +2,278 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+	<meta charset="utf-8" />
+	<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+	<!--
+			manifest.json provides metadata used when your web app is installed on a
+			user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+		-->
+	<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+	<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+	<!--
+			Notice the use of %PUBLIC_URL% in the tags above.
+			It will be replaced with the URL of the `public` folder during the build.
+			Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+			Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+			work correctly both with client-side routing and a non-root public URL.
+			Learn how to configure a non-root public URL by running `npm run build`.
+		-->
 
-  <!-- <link rel="stylesheet" href="%PUBLIC_URL%/assets/iota-css/layout.css"> -->
-  <link rel="stylesheet" href="%PUBLIC_URL%/assets/iota-css/HeroParticlesVideo.css">
+	<!-- <link rel="stylesheet" href="%PUBLIC_URL%/assets/iota-css/layout.css"> -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<title>React App</title>
 
-  <title>React App</title>
+	<style>
+		#tsparticles {
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+	</style>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div id="root"></div>
+	<div id="tsparticles"></div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+
+	<!--
+			This HTML file is a template.
+			If you open it directly in the browser, you will see an empty page.
+
+			You can add webfonts, meta tags, or analytics to this file.
+			The build step will place the bundled scripts into the <body> tag.
+
+			To begin the development, run `npm start` or `yarn start`.
+			To create a production bundle, use `npm run build` or `yarn build`.
+		-->
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./assets/font.js"></script>
+
+<!-- <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script> -->
+
+
+<!-- particle js start -->
+<!-- first include tsParticles engine -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-engine"></script>
+<!-- then include any tsParticles plugin needed -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script>
+<!-- then include jquery wrapper -->
+<script src="https://cdn.jsdelivr.net/npm/jquery-particles"></script>
+<!-- particle js end -->
+<script>
+	AOS.init({
+		easing: 'ease-out-back',
+		duration: 1000
+	});
+
+
+	// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+	// starting from v2 you can add only the features you need reducing the bundle size
+	$(document).ready(async function () {
+		await loadFull(tsParticles);
+
+		$("#tsparticles")
+			.particles()
+			.init(
+				{
+					fpsLimit: 60,
+					retina_detect: false,
+					detectRetina: false,
+					"background": {
+						"color": {
+							"value": "transparent"
+						},
+						"position": "50% 50%",
+						"repeat": "no-repeat",
+						"size": "cover",
+						"opacity": 1,
+					},
+					"fullScreen": {
+						"enable": false,
+						"zIndex": -10
+					},
+					"interactivity": {
+						"events": {
+							"onClick": {
+								"enable": false,
+								"mode": "push"
+							},
+							"onDiv": {
+								"selectors": "#repulse-div",
+								"mode": "repulse"
+							},
+							"onHover": {
+								"enable": true,
+								"mode": "bubble",
+								"parallax": {
+									"force": 60
+								}
+							}
+						},
+						"modes": {
+							"bubble": {
+								"distance": 400,
+								"duration": 2,
+								"opacity": 0.8,
+								"size": 40
+							},
+							"grab": {
+								"distance": 400
+							},
+							"slow": {
+								"factor": 1,
+								"radius": 0
+							}
+						}
+					},
+					"particles": {
+						"number": {
+							"value": 50,
+							"density": {
+								"enable": true,
+								"value_area": 1600
+							}
+						},
+						"line_linked": {
+							"enable": false
+						},
+						"move": {
+							"angle": {
+								"offset": 0,
+								"value": 90
+							},
+							"attract": {
+								"distance": 200,
+								"enable": false,
+								"rotate": {
+									"x": 600,
+									"y": 1200
+								}
+							},
+							"center": {
+								"x": 50,
+								"y": 50,
+								"radius": 0
+							},
+							"decay": 0,
+							"distance": {},
+							"direction": "none",
+							"drift": 0,
+							"enable": true,
+							"gravity": {
+								"acceleration": 9.81,
+								"enable": false,
+								"inverse": false,
+								"maxSpeed": 50
+							},
+							"path": {
+								"clamp": true,
+								"delay": {
+									"random": {
+										"enable": false,
+										"minimumValue": 0
+									},
+									"value": 0
+								},
+								"enable": false,
+								"options": {}
+							},
+							"outModes": {
+								"default": "out",
+								"bottom": "out",
+								"left": "out",
+								"right": "out",
+								"top": "out"
+							},
+							"random": false,
+							"size": false,
+							"speed": 2,
+							"spin": {
+								"acceleration": 0,
+								"enable": false
+							},
+							"straight": false,
+							"trail": {
+								"enable": false,
+								"length": 10,
+								"fillColor": {
+									"value": "#000000"
+								}
+							},
+							"vibrate": false,
+							"warp": false
+						},
+						"shape": {
+							"type": [
+								"image",
+							],
+							"image": [
+								{
+									"src": './assets/logo.png',
+									"height": 20,
+									"width": 23
+								},
+								{
+									"src": './assets/logo.png',
+									"height": 20,
+									"width": 20
+								},
+								{
+									"src": './assets/logo.png',
+									"height": 20,
+									"width": 20
+								}
+							]
+						},
+						"color": {
+							"value": "#CCC"
+						},
+						"size": {
+							"value": 30,
+							"random": false,
+							"anim": {
+								"enable": true,
+								"speed": 20,
+								"size_min": 10,
+								"sync": false
+							}
+						}
+					}
+
+				},
+				function (container) {
+					// container is the particles container where you can play/pause or stop/start.
+					// the container is already started, you don't need to start it manually.
+				}
+			);
+
+		// or
+
+		// $("#tsparticles")
+		//   .particles()
+		//   .ajax("particles.json", function (container) {
+		//     // container is the particles container where you can play/pause or stop/start.
+		//     // the container is already started, you don't need to start it manually.
+		//   });
+
+
+	});
+
+</script>
 
 <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
