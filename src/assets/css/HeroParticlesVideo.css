@@ -3541,7 +3541,7 @@ section:not(.prevent-arrow-links) .content-block .richtext-block ul.has-links.sv
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
     background-color: rgb(15 193 183/var(--tw-bg-opacity));
-    background: linear-gradient(120deg, #0fc1b7 50%, #00e0ca);
+    background: linear-gradient(120deg, #13c034 50%, #8cdfa5);
     background-position: 0 0;
     background-size: 200% 100%;
     color: rgb(255 255 255/var(--tw-text-opacity));

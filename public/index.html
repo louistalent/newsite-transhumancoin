@@ -26,6 +26,7 @@
 
 	<!-- <link rel="stylesheet" href="%PUBLIC_URL%/assets/iota-css/layout.css"> -->
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 	<title>React App</title>
 
 	<style>
@@ -36,12 +37,21 @@
 			right: 0;
 			bottom: 0;
 		}
+
+		iframe .caontainer {
+			min-width: 100% !important;
+		}
 	</style>
 </head>
 
 <body>
 	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<!-- coin slider -->
+	<script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
+
 	<div id="root"></div>
+	<!-- <div class="livecoinwatch-widget-5" lcw-base="_THC" lcw-color-tx="#ffffff" lcw-marquee-1="coins"
+		lcw-marquee-2="coins" lcw-marquee-items="10"></div> -->
 	<div id="tsparticles"></div>
 
 
@@ -57,6 +67,7 @@
 			To create a production bundle, use `npm run build` or `yarn build`.
 		-->
 </body>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -142,7 +153,7 @@
 					},
 					"particles": {
 						"number": {
-							"value": 50,
+							"value": 40,
 							"density": {
 								"enable": true,
 								"value_area": 1600
@@ -226,16 +237,6 @@
 									"src": './assets/logo.png',
 									"height": 20,
 									"width": 23
-								},
-								{
-									"src": './assets/logo.png',
-									"height": 20,
-									"width": 20
-								},
-								{
-									"src": './assets/logo.png',
-									"height": 20,
-									"width": 20
 								}
 							]
 						},

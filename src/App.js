@@ -6,17 +6,19 @@ import Routers from './router';
 import ContextProvider, { useBlockchainContext } from "./contexts";
 
 // Module
-import React from 'react';
+import React, { Suspense } from 'react';
 // import { NotificationContainer } from "react-notifications";
+import './i18n.js';
 
 // import 'react-notifications/lib/notifications.css';
 // import 'pure-react-carousel/dist/react-carousel.es.css';
 // import 'bootstrap/dist/css/bootstrap.css';
 
-// import "swiper/swiper-bundle.min.css";
-// import "swiper/swiper.min.css";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 import "./assets/css/HeroParticlesVideo.css";
 import "./assets/css/layout.css";
+// import "swiper/css/autoplay.css";
 // import "./assets/css/my_custom_css2.0.css";
 
 // import "swiper/css/navigation";
@@ -36,7 +38,9 @@ function App() {
           portis: { dAppId: "www.transhumancoin.finance" },
         }}>
         <ContextProvider>
-          <Routers />
+          <Suspense fallback="...loading">
+            <Routers />
+          </Suspense>
           {/* <NotificationContainer /> */}
         </ContextProvider>
       </UseWalletProvider>

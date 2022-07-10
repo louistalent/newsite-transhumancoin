@@ -1,5 +1,7 @@
 
 import { GitSvg, LinkedinSvg, MediumSvg, TwitterSvg, ScholarSvg } from "../../../assets/svg/svg";
+import { AiFillFacebook } from "react-icons/ai";
+
 const url = "/assets/team-members/";
 const img_a_class = "image-wrapper block my-1 mx-auto mb-6 relative z-0 svelte-1xhtrrh";
 const members = [
@@ -136,6 +138,7 @@ const members = [
         scholar: '',
     },
 ]
+
 const Team = () => {
     return (
         <section className="pt5 pb5 z-10 overflow-hidden py-10 md:py-20 relative  undefined svelte-am2ffe lazyloaded" style={{ background: 'center / cover no-repeat #F6F8FC', paddingTop: '80px' }} >
@@ -153,14 +156,18 @@ const Team = () => {
                                 </a>
                                 <h4 className="text-center mb-2">{member.name}</h4>
                                 <div className="text-grey-10pm text-center">{member.roll}</div>
-                                <div className="w-full mt-2 flex justify-center">
+                                <div className="w-full mt-2 flex justify-center icon-color">
                                     <a className="social_link svelte-1xhtrrh" target="_blank" rel="noreferrer" href={`https://www.linkedin.com/` + member.linkedin}>
                                         <LinkedinSvg />
                                     </a>
                                     <a className="social_link svelte-1xhtrrh" target="_blank" rel="noreferrer" href={`https://twitter.com/` + member.twitter}>
                                         <TwitterSvg />
                                     </a>
-                                    <a className="social_link svelte-1xhtrrh" target="_blank" rel="noreferrer" href={`https://medium.com/` + member.medium}>
+                                    <a className="social_link svelte-1xhtrrh" target="_blank" rel="noreferrer" href={`https://twitter.com/` + member.twitter}>
+                                        <AiFillFacebook fontSize={'32px'} className="svelte-1xhtrrh" fill="#C3D0E4" />
+                                    </a>
+
+                                    {/* <a className="social_link svelte-1xhtrrh" target="_blank" rel="noreferrer" href={`https://medium.com/` + member.medium}>
                                         <MediumSvg />
                                     </a>
                                     <a className="social_link svelte-1xhtrrh" target="_blank" rel="noreferrer" href={`https://github.com/` + member.github}>
@@ -168,7 +175,7 @@ const Team = () => {
                                     </a>
                                     <a className="social_link svelte-1xhtrrh" target="_blank" rel="noreferrer" href={`https://scholar.google.com.br/` + member.scholar}>
                                         <ScholarSvg />
-                                    </a>
+                                    </a> */}
                                 </div>
                             </div>
                         ))

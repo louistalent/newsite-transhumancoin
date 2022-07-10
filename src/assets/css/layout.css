@@ -1882,7 +1882,7 @@ p:empty {
 
 .headline-stick {
     --tw-bg-opacity: 1;
-    background-color: rgb(0 224 202/var(--tw-bg-opacity));
+    background-color: #13c034;
     height: 4px;
     margin-bottom: 1.25rem;
     width: 16px;

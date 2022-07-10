@@ -6,8 +6,9 @@ import { useWallet, UseWalletProvider } from 'use-wallet'
 import { useLocation, useHistory } from 'react-router-dom';
 import { useBlockchainContext } from '../../contexts';
 
-// import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 // import { Navigation } from "swiper";
+import { Autoplay } from 'swiper';
 
 import Tokenomics from "./sections/tokenomics";
 import Whitepaper from "./sections/whitepaper";
@@ -19,6 +20,7 @@ import AttackCoin from './sections/attackCoin';
 import Buy from './sections/buy';
 import Roadmap from './sections/roadmap';
 import Faq from './sections/faq';
+
 
 var nextTimeTrigger = '0';
 var nextTimeTrigger2 = '0';
@@ -35,10 +37,10 @@ function Home() {
 	const [beforeActiveNumber, setBeforeActiveNumber] = useState(0);
 
 	const FirstSlideActive = (number) => {
-		if (number > 3) {
+		if (number > 4) {
 			number = 1;
 		} else if (number < 1) {
-			number = 3;
+			number = 4;
 		}
 
 		if (beforeActiveNumber !== 0) {
@@ -52,8 +54,8 @@ function Home() {
 			window.document.getElementById(`slide-article-circle-${beforeActiveNumber}`)?.classList.remove('circle-fade-in');
 
 			if (number === 2) {
-				window.document.getElementById(`slide-video-3`)?.classList.remove('inactive');
-				window.document.getElementById(`slide-article-3`)?.classList.remove('inactive');
+				window.document.getElementById(`slide-video-4`)?.classList.remove('inactive');
+				window.document.getElementById(`slide-article-4`)?.classList.remove('inactive');
 			}
 			window.document.getElementById(`slide-video-${beforeActiveNumber - 1}`)?.classList.remove('inactive');
 			window.document.getElementById(`slide-article-${beforeActiveNumber - 1}`)?.classList.remove('inactive');
@@ -72,8 +74,8 @@ function Home() {
 
 			if (number === 1) {
 				// max number
-				window.document.getElementById(`slide-video-3`)?.classList.add('inactive');
-				window.document.getElementById(`slide-article-3`)?.classList.add('inactive');
+				window.document.getElementById(`slide-video-4`)?.classList.add('inactive');
+				window.document.getElementById(`slide-article-4`)?.classList.add('inactive');
 
 			} else {
 				window.document.getElementById(`slide-video-${number - 1}`)?.classList.add('inactive');
@@ -83,6 +85,7 @@ function Home() {
 			window.document.getElementById(`slide-article-richtext-1`).classList.add('fade-out-right-animate');
 			window.document.getElementById(`slide-article-richtext-2`).classList.add('fade-out-right-animate');
 			window.document.getElementById(`slide-article-richtext-3`).classList.add('fade-out-right-animate');
+			window.document.getElementById(`slide-article-richtext-4`).classList.add('fade-out-right-animate');
 			window.document.getElementById(`slide-article-richtext-${number}`).classList.remove('fade-out-right-animate');
 			window.document.getElementById(`slide-article-richtext-${number}`).classList.add('fade-in-right-animate');
 
@@ -92,10 +95,10 @@ function Home() {
 		nextTimeTrigger = '0';
 	}
 	const SecondSlideActive = (number) => {
-		if (number > 4) {
+		if (number > 5) {
 			number = 1;
 		} else if (number < 1) {
-			number = 4;
+			number = 5;
 		}
 
 		// inactive
@@ -108,9 +111,9 @@ function Home() {
 			window.document.getElementById(`second-slide-video-${beforeActiveNumber}`)?.classList.remove('active');
 			window.document.getElementById(`second-slide-article-${beforeActiveNumber}`)?.classList.remove('active');
 
-			if (number === 4) {
-				window.document.getElementById(`second-slide-video-4`)?.classList.remove('inactive');
-				window.document.getElementById(`second-slide-article-4`)?.classList.remove('inactive');
+			if (number === 5) {
+				window.document.getElementById(`second-slide-video-5`)?.classList.remove('inactive');
+				window.document.getElementById(`second-slide-article-5`)?.classList.remove('inactive');
 			}
 			window.document.getElementById(`second-slide-video-${beforeActiveNumber - 1}`)?.classList.remove('inactive');
 			window.document.getElementById(`second-slide-article-${beforeActiveNumber - 1}`)?.classList.remove('inactive');
@@ -129,8 +132,8 @@ function Home() {
 
 			if (number === 1) {
 				// max number
-				window.document.getElementById(`second-slide-video-4`)?.classList.add('inactive');
-				window.document.getElementById(`second-slide-article-4`)?.classList.add('inactive');
+				window.document.getElementById(`second-slide-video-5`)?.classList.add('inactive');
+				window.document.getElementById(`second-slide-article-5`)?.classList.add('inactive');
 
 			} else {
 				window.document.getElementById(`second-slide-video-${number - 1}`)?.classList.add('inactive');
@@ -139,7 +142,6 @@ function Home() {
 		}
 		nextTimeTrigger = '0';
 	}
-
 
 	const SlideTimeTrigger = (count) => {
 		nextTimeTrigger = parseFloat(nextTimeTrigger) + parseFloat(count);
@@ -180,7 +182,6 @@ function Home() {
 		window.document.querySelector('.item.active .relative .circle-animated circle').classList.remove('circle-animation');
 		window.document.querySelector('.item.active .stick-wrapper .dot-stick').classList.remove('right-animation');
 	}
-
 	const pathMove = () => {
 		window.open(oursiteURL);
 		// history.push({ pathname: oursiteURL, target: '_blank' });
@@ -195,7 +196,7 @@ function Home() {
 			<div>
 				<div className="landing">
 					<div className="content">
-						{/* first section */}
+						{/* first section start*/}
 						<section className="z-10 overflow-hidden py-10 md:py-20 relative  undefined svelte-am2ffe lazyloaded">
 
 							<div className="w-full ">
@@ -205,20 +206,29 @@ function Home() {
 										{/* first section slider */}
 										<section className="heroparticles z-0 relative svelte-njtwo6 slider-section ">
 											<video id="slide-video-1" className="svelte-njtwo6 " poster="/assets/new-slide/secure.webp" preload="metadata" height="100%" width="100%" playsInline="" data-xblocker="passed" style={{ visibility: 'visible' }}>
-												<source data-src="https://videos.ctfassets.net/xit7f234flxz/vWgyEvbf4sULsQJPaIKqf/a32fcfbefb146832045cb338f9b210b0/earth.webm" type="video/webm" src="https://videos.ctfassets.net/xit7f234flxz/vWgyEvbf4sULsQJPaIKqf/a32fcfbefb146832045cb338f9b210b0/earth.webm" />
-												<source data-src="https://videos.ctfassets.net/xit7f234flxz/1dFj68bPRRDOJzSPMOj1Ob/d7e6164137c9af6f3b3ec8b337c7580e/earth.mp4" type="video/mp4" src="https://videos.ctfassets.net/xit7f234flxz/1dFj68bPRRDOJzSPMOj1Ob/d7e6164137c9af6f3b3ec8b337c7580e/earth.mp4" /> Your browser does not support video on HTML.
+												<source data-src="" type="video/webm" src="" />
+												<source data-src="" type="video/mp4" src="" /> Your browser does not support video on HTML.
 											</video>
 
 											<video id="slide-video-2" className="svelte-njtwo6 " poster="/assets/new-slide/ox.jpg" preload="metadata" height="50%" width="100%" playsInline="" data-xblocker="passed" style={{ visibility: 'visible' }}>
-												<source data-src="https://videos.ctfassets.net/xit7f234flxz/7BqsHwcJ0cjnSY77lhYyO7/5d5d9c6688a791d21cc651fa54f2896c/woman.webm" type="video/webm" src="https://videos.ctfassets.net/xit7f234flxz/7BqsHwcJ0cjnSY77lhYyO7/5d5d9c6688a791d21cc651fa54f2896c/woman.webm" />
-												<source data-src="https://videos.ctfassets.net/xit7f234flxz/1PO5rcY0JekmSu3nthvwOd/840fca76899602b16dd2732e68789773/woman.mp4" type="video/mp4" src="https://videos.ctfassets.net/xit7f234flxz/1PO5rcY0JekmSu3nthvwOd/840fca76899602b16dd2732e68789773/woman.mp4" /> Your browser does not support video on HTML.
+												<source data-src="" type="video/webm" src="" />
+												<source data-src="" type="video/mp4" src="" /> Your browser does not support video on HTML.
 											</video>
 
 											<video id="slide-video-3" className="svelte-njtwo6" poster="/assets/new-slide/10.png" preload="metadata" height="100%" width="100%" playsInline="" data-xblocker="passed" style={{ visibility: 'visible' }}>
-												<source data-src="https://videos.ctfassets.net/xit7f234flxz/5oS9766ujenwwCjpiBQCQl/0669597bf8130c9ac44d32fa683e7a35/machine.webm" type="video/webm" src="https://videos.ctfassets.net/xit7f234flxz/5oS9766ujenwwCjpiBQCQl/0669597bf8130c9ac44d32fa683e7a35/machine.webm" />
-												<source data-src="https://videos.ctfassets.net/xit7f234flxz/581ZwxnzRMowebLVdaAZ1S/3a362c13a633111efed4ad7d966ce61f/machine.mp4" type="video/mp4" src="https://videos.ctfassets.net/xit7f234flxz/581ZwxnzRMowebLVdaAZ1S/3a362c13a633111efed4ad7d966ce61f/machine.mp4" /> Your browser does not support video on HTML.
+												<source data-src="" type="video/webm" src="" />
+												<source data-src="" type="video/mp4" src="" /> Your browser does not support video on HTML.
 											</video>
 
+											<video id="slide-video-4" className="svelte-njtwo6" poster="/assets/new-slide/gene.jpg" preload="metadata" height="100%" width="100%" playsInline="" data-xblocker="passed" style={{ visibility: 'visible' }}>
+												<source data-src="" type="video/webm" src="" />
+												<source data-src="" type="video/mp4" src="" /> Your browser does not support video on HTML.
+											</video>
+
+
+
+
+											{/* Gene therapy   gene.jpg */}
 											<nav className="container svelte-njtwo6">
 												<div onClick={() => { FirstSlideActive(beforeActiveNumber - 1) }} className="arrow-button left body font-semibold text-sm text-grey-8pm leading-none svelte-njtwo6">
 													<svg width="50" height="50" viewBox="0 0 50 50" fill="#181e32" xmlns="http://www.w3.org/2000/svg" className="svelte-njtwo6">
@@ -337,20 +347,60 @@ function Home() {
 													</div>
 												</div>
 											</article>
+											<article id='slide-article-4' className="svelte-njtwo6 ">
+												<div>
+													<h1 className="letters-from-blur hero svelte-njtwo6" style={{ opacity: 1 }}>
+														<span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.48176s' }}>G</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.28926s' }}>e</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '0.655029s' }}>n</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '0.655029s' }}>e</span>
+														</span>
+														<span><span className="notranslate"> </span>
+														</span>
+														<br className="md:hidden" />
+														<strong className='po-re'>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '0.794224s' }}>T</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.30495s' }}>h</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.50362s' }}>e</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.76469s' }}>r</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.05814s' }}>a</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.44582s' }}>p</span>
+															<span className="notranslate element-from-blur" style={{ animationDuration: '1.40109s' }}>y</span>
+															<svg id='slide-article-circle-4' viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="svelte-njtwo6">
+																<circle cx="50" cy="50" r="50" fill="#00E0CA"></circle>
+															</svg>
+														</strong>
+													</h1>
+													<div id='slide-article-richtext-4' className="richtext-slide1 richtext text-base leading-normal text-grey-4pm fade-in-right svelte-njtwo6">
+														<div className="rich-text-block" style={{}}>
+															<p>Gene therapy with TRANSHUMANCOIN for people</p>
+														</div>
+													</div>
+												</div>
+											</article>
 										</section>
 									</div>
 
 								</div >
 							</div >
 						</section >
-						{/* first section */}
+						{/* first section end*/}
 
+						{/* coin slider start*/}
+						<div className="relative z-10 overflow-hidden undefined svelte-am2ffe lazyloaded" style={{ background: 'center / cover no-repeat #293143ab' }}>
+							<div className="livecoinwatch-widget-5 mt1" lcw-base="_THC" lcw-color-tx="#ffffff" lcw-marquee-1="coins" lcw-marquee-2="coins" lcw-marquee-items="10" ></div>
+						</div>
+						{/* coin slider end*/}
 
-						{/* second section */}
+						{/* second section start*/}
 						<div id='tokenomics_id'>
 							<Tokenomics />
 						</div>
+						{/* second section end*/}
+
 						<Benefit />
+
 						<div id='buy_id'>
 							<Buy />
 						</div>
@@ -364,23 +414,29 @@ function Home() {
 											<div className="bg w-full h-full absolute top-0 left-0" id="bg-video-container">
 
 												<video id='second-slide-video-1' height="50%" width="50%" poster="/assets/our-sites/valid.finance.png" className="svelte-1vgghv3" preload="metadata" playsInline="" loop="" data-xblocker="passed" style={{ visibility: 'visible' }}>
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/3k3jVHqT8dXNlrOocLnhsJ/4ae90b49c9d38bc85d316fe43c3c231b/social.webm" type="video/webm" src="https://videos.ctfassets.net/xit7f234flxz/3k3jVHqT8dXNlrOocLnhsJ/4ae90b49c9d38bc85d316fe43c3c231b/social.webm" />
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/kn00AEG4RJQNBRaMN0aS0/1fa4a089a715c19ba5c00acbb5214d6f/social.mp4" type="video/mp4" src="https://videos.ctfassets.net/xit7f234flxz/kn00AEG4RJQNBRaMN0aS0/1fa4a089a715c19ba5c00acbb5214d6f/social.mp4" /> Your browser does not support video on HTML.
+													<source data-src="" type="video/webm" src="" />
+													<source data-src="" type="video/mp4" src="" /> Your browser does not support video on HTML.
 												</video>
 
 												<video id='second-slide-video-2' height="100%" width="100%" poster="/assets/our-sites/p2p.jpg" className="svelte-1vgghv3 active" preload="metadata" playsInline="" loop="" data-xblocker="passed" style={{ visibility: 'visible' }}>
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/qGQX8q5vuQu52AmH5LCSv/6a0b39c81cf12869067340c467e84468/monility.webm" type="video/webm" src="https://videos.ctfassets.net/xit7f234flxz/qGQX8q5vuQu52AmH5LCSv/6a0b39c81cf12869067340c467e84468/monility.webm" />
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/F6TGcJFxEEJx3L8UmEXBX/54dfc36742ce61f007051555daf544e7/mobility.mp4" type="video/mp4" src="https://videos.ctfassets.net/xit7f234flxz/F6TGcJFxEEJx3L8UmEXBX/54dfc36742ce61f007051555daf544e7/mobility.mp4" /> Your browser does not support video on HTML.
+													<source data-src="" type="video/webm" src="" />
+													<source data-src="" type="video/mp4" src="" /> Your browser does not support video on HTML.
 												</video>
 
 												<video id='second-slide-video-3' height="100%" width="100%" poster="/assets/our-sites/staking.jpg" className="lazy svelte-1vgghv3" preload="metadata" playsInline="" loop="" data-xblocker="passed" style={{ visibility: 'visible' }}>
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/3dITuhCXLn7MKFDx6AU5GA/476041600c8fff319ff6d516175ef630/smartcity.webm" type="video/webm" />
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/3h4ZducPhhxOa6dzQMgLRU/591dad0e9150f5e730a8d1c043923d65/smartcity.mp4" type="video/mp4" /> Your browser does not support video on HTML.
+													<source data-src="" type="video/webm" />
+													<source data-src="" type="video/mp4" /> Your browser does not support video on HTML.
 												</video>
 
 												<video id='second-slide-video-4' height="100%" width="100%" poster="/assets/our-sites/NFT.png" className="lazy svelte-1vgghv3" preload="metadata" playsInline="" loop="" data-xblocker="passed" style={{ visibility: 'visible' }}>
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/7gfDMrDXjAvTkJHRMguCmM/64d617bff932d363d7909ecc44e38f16/Globaltrade.webm" type="video/webm" />
-													<source data-src="https://videos.ctfassets.net/xit7f234flxz/6zOLFXrbaZVCWaUGmC3JCM/d7e4339c598582cd4012536453026429/Globaltrade.mp4" type="video/mp4" /> Your browser does not support video on HTML.
+													<source data-src="" type="video/webm" />
+													<source data-src="" type="video/mp4" /> Your browser does not support video on HTML.
+												</video>
+
+
+												<video id='second-slide-video-5' height="100%" width="100%" poster="/assets/our-sites/shop.jpg" className="lazy svelte-1vgghv3" preload="metadata" playsInline="" loop="" data-xblocker="passed" style={{ visibility: 'visible' }}>
+													<source data-src="" type="video/webm" />
+													<source data-src="" type="video/mp4" /> Your browser does not support video on HTML.
 												</video>
 
 												<div className="bg-filter-1 w-full h-full absolute top-0 left-0 svelte-1vgghv3"></div>
@@ -532,6 +588,37 @@ function Home() {
 														</a>
 													</div>
 
+													<div id='second-slide-article-5' className="item svelte-1vgghv3">
+														<div className="litle-title svelte-1vgghv3">Shoping site</div>
+														<div className="title relative svelte-1vgghv3">
+															<span id='second-slide-spans-5' className="letters-from-blur remove-white-spaces inline-block" style={{ opacity: 1 }}>
+																<span>
+																	<span className="notranslate element-from-blur" style={{ animationDuration: '1.2047s' }}>S</span>
+																	<span className="notranslate element-from-blur" style={{ animationDuration: '1.12896s' }}>h</span>
+																	<span className="notranslate element-from-blur" style={{ animationDuration: '0.786661s' }}>o</span>
+																	<span className="notranslate element-from-blur" style={{ animationDuration: '0.786661s' }}>p</span>
+																	<span className="notranslate"></span>
+
+																</span>
+															</span>
+															<svg className="green-circle svelte-1vgghv3" height="180" width="180" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<circle cx="50" cy="50" r="50" fill="#00E0CA" className="svelte-1vgghv3"></circle>
+															</svg>
+															<svg onClick={pathMove} onMouseEnter={() => hoverEffect()} onMouseLeave={() => noHoverEffect()} className="circle-animated svelte-1vgghv3" height="180" width="180">
+																<circle stroke="#00E0CA" fill="transparent" strokeDasharray="556.0618996853934 556.0618996853934" style={{ strokeDashoffset: '-556.0618996853934', opacity: 1 }} strokeWidth="3" r="88.5" cx="90" cy="90" className="svelte-1vgghv3"></circle>
+															</svg>
+														</div>
+														<div className="stick-wrapper svelte-1vgghv3">
+															<div className="dot-stick svelte-1vgghv3"></div>
+														</div>
+														<a target={'_blank'} rel='noreferrer' className="absolute text-xs font-semibold flex items-center svelte-1vgghv3" href={oursiteURL}>
+															<div>Visit page</div>
+															<svg className="arrow-svg ml-2 svelte-1vgghv3" width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M1 11L6 6L1 1" stroke="#F6F8FC" strokeWidth="2" className="svelte-1vgghv3"></path>
+															</svg>
+														</a>
+													</div>
+
 
 												</div>
 											</nav>
@@ -555,18 +642,100 @@ function Home() {
 								</div>
 							</div>
 						</section>
+						{/* third section end */}
+
 						<AttackCoin />
 
-						{/* whitepaper */}
+						{/* whitepaper start*/}
 						<div id='whitepaper_id'>
 							<Whitepaper />
 						</div>
+						{/* whitepaper end*/}
+
+						{/* swap start*/}
+						<div id='swap_id' className="relative z-10 overflow-hidden undefined svelte-am2ffe lazyloaded" style={{ width: '100%', height: '800px' }}>
+							<iframe src="https://swap.swft.pro/#/?sourceFlag=THC" width="100%" height="100%" style={{ border: 'none' }} />
+						</div>
+						{/* swap end*/}
+
+						{/* partnership start */}
+						<div id='swiper_id' className="relative z-10 overflow-hidden undefined svelte-am2ffe lazyloaded" >
+							<div className="partners-logo-section p-tb light-gray-bg">
+								<div className="container pt1 pb1">
+									<div className="text-center">
+										<h2 className="section-heading">Where to Find Transhuman Coin</h2>
+									</div>
+									<div className="brand-logos owl-carousel">
+										<Swiper
+											spaceBetween={50}
+											slidesPerView={4}
+											autoplay={{
+												delay: 2500,
+												disableOnInteraction: false,
+											}}
+											modules={[Autoplay]}
+											rewind={true}
+										>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark1.png" alt="Brand Logo 1" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark2.png" alt="Brand Logo 2" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark5.png" alt="Brand Logo 5" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark4.png" alt="Brand Logo 4" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark3.png" alt="Brand Logo 3" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-6.png" alt="Brand Logo 6" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-7.png" alt="Brand Logo 7" />
+											</SwiperSlide>
+
+											{/*  */}
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark1.png" alt="Brand Logo 1" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark2.png" alt="Brand Logo 2" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark5.png" alt="Brand Logo 5" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark4.png" alt="Brand Logo 4" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-dark3.png" alt="Brand Logo 3" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-6.png" alt="Brand Logo 6" />
+											</SwiperSlide>
+											<SwiperSlide>
+												<img src="/assets/partner/brand-logo-7.png" alt="Brand Logo 7" />
+											</SwiperSlide>
+
+										</Swiper>
+									</div>
+								</div>
+							</div>
+						</div>
+						{/* partnership end*/}
+
 						<div id='team_id'>
 							<Team />
 						</div>
+
 						<div id='faq_id'>
 							<Faq />
 						</div>
+
 						<div id='roadmap_id'>
 							<Roadmap />
 						</div>

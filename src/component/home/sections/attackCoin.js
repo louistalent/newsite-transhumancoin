@@ -1,6 +1,8 @@
 
+import { useTranslation } from 'react-i18next'
 
 const AttackCoin = () => {
+    const { t } = useTranslation();
     return (
         <section className="pt5 pb5 z-10 overflow-hidden py-10 md:py-20 relative  undefined svelte-am2ffe lazyloaded" style={{ background: 'center / cover no-repeat #F6F8FC', paddingTop: '80px' }} >
             <div className="container ">
